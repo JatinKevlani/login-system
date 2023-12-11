@@ -54,7 +54,8 @@ def signin(request):
         
         else:
             messages.error(request, "Invalid username or password!")
-            return redirect("home")
+            return redirect("signin")
+        
     return render (request, "authentication/signin.html")
     
 def signout(request):
