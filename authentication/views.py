@@ -5,9 +5,11 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
-
 # Create your views here.
 
+def error_404(request, exception) :
+    return render(request, '404.html')
+ 
 def home(request):
     return render (request, "authentication/index.html")
 
